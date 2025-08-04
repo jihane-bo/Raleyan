@@ -1,0 +1,116 @@
+/* Styles communs à toutes les marques - Raleyan Concept Store */
+
+/* Variables CSS pour la cohérence */
+:root {
+    --primary-font: 'Open Sans', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+    --transition-duration: 0.3s;
+}
+
+/* Reset et styles de base communs */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.6;
+}
+
+/* Styles pour le preloader commun */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.preloader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Spinner animation */
+.spinner {
+    width: 70px;
+    text-align: center;
+}
+
+.spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    animation-delay: -0.16s;
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0);
+    } 40% {
+        transform: scale(1.0);
+    }
+}
+
+/* Styles communs pour les boutons */
+.btn-common {
+    transition: all var(--transition-duration) ease;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Styles communs pour les sections */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Styles communs pour les titres */
+.section-title {
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+/* Styles communs pour le footer */
+.footer-common {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-common a {
+    color: #ecf0f1;
+    transition: color var(--transition-duration) ease;
+}
+
+.footer-common a:hover {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Responsive helpers communs */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        margin-bottom: 30px;
+    }
+}
